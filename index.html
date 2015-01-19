@@ -5,13 +5,22 @@
 </head>
 <body>
 
-    <noscript>
-        RADAR requires JavaScript. Please enable JavaScript in your browser to use RADAR.
-    </noscript>
-    <script language="javascript">
- 		alert("This page exsists to demonstrate scripts I create before adding them to a more sophisticated project.")
- 	</script>
-	<!-- <p>This page exsists to demonstrate scripts I create before adding them to a more sophisticated project.</p> -->
+<!-- I want to display login if JS is enabled, and hide login if JS is disabled
+I want to display a message if JS is disabled, and hide it if JS is enabled
+ -->
+	<noscript>	
+		<style type="text/css">
+		.pagecontainer {display: none;}
+		</style>
+	 	<div class="JavaScript-disabled">
+			JavaScript is disabled. Fix it please. 		
+	 	</div>
+	</noscript>
+
+    <div class="pagecontainer" display:block>
+    	JavaScript is enabled. Here is a bunch of login stuff!
+    </div>
+	<p>This page exsists to demonstrate scripts I create before adding them to a more sophisticated project.</p>
 
 </body>
 </html>
