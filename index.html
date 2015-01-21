@@ -2,10 +2,11 @@
 <html>
 <head>
 	<title>Proof of Concept Page</title>
-			<style type="text/css">
+		<style type="text/css">
 			.page-container {display:block;}
 			.javascript-disabled {display:none;}
-			</style>
+			.cookies-disabled {display:none;}
+		</style>
 		<noscript>	
 			<style type="text/css">
 			.page-container {display:none;}
@@ -15,18 +16,24 @@
 </head>
 <body>
 
-<!-- I want to display login if JS is enabled, and hide login if JS is disabled
-I want to display a message if JS is disabled, and hide it if JS is enabled
- -->
-
+	<!-- This is the stuff if everything is good. -->
     <div class="page-container">
-    	<p>JavaScript is enabled. Here is a bunch of login stuff!</p>
+    	<p>JavaScript is enabled. Here is a bunch of login stuff! All the stuff I want to only show if JavaScript is enabled!</p>
     </div>
 
+	<!-- This is the stuff if NOT everything is good. -->
  	<div class="javascript-disabled">
 		<p>JavaScript is disabled. Fix it please.</p>
  	</div>
+ 	<div class="cookies-disabled">
+ 		<p>Cookies are disabled. Fix it please.</p>
+ 	</div>
 
+ 	<!-- Scripts to check for cookies. -->
+ 	<script type="text/javascript" src="cookies.min.js"></script>
+	<script type="text/javascript" src="scripts.js"></script>
+
+ 	<!-- This displays no matter what. -->
 	<p>This page exsists to demonstrate scripts I create before adding them to a more sophisticated project.</p>
 
 </body>
